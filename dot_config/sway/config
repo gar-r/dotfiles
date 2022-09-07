@@ -1,0 +1,24 @@
+exec /usr/bin/dunst
+exec /usr/lib/polkit-gnome/polkit-gnome-authentication-agent-1
+exec dbus-update-activation-environment --systemd DISPLAY WAYLAND_DISPLAY SWAYSOCK
+
+set {
+  $mod     Mod4
+  $modp    $mod+Shift
+
+  $left    h
+  $down    j
+  $up      k
+  $right   l
+
+  $term kitty
+  $menu wofi --show drun | xargs swaymsg exec --
+  $apps wofi --show run  | xargs swaymsg exec --
+  $web firefox
+  $refresh "/usr/local/bin/okki-refresh"
+} 
+
+include catppuccin-mocha
+include config.d/*
+
+include /etc/sway/config.d/*

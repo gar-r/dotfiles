@@ -1,0 +1,9 @@
+README.md
+LICENSE
+
+{{- if ne .chezmoi.hostname "arch-work" }}
+.config/openconnect
+{{- end }}
+
+.config/nvim/autoload
+.config/nvim/plugged

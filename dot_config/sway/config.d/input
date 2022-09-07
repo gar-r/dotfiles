@@ -1,0 +1,11 @@
+# list inputs with: swaymsg -t get_inputs
+
+input "type:keyboard" {
+  xkb_layout us,hu
+  xkb_options grp:rctrl_rshift_toggle
+}
+
+input "type:touchpad" {
+  dwt enabled
+  tap enabled
+}

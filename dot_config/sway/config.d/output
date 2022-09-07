@@ -1,0 +1,5 @@
+### Output configuration
+# list outputs with: swaymsg -t get_outputs
+
+# setup displays
+# output HDMI-A-1 resolution 1920x1080 position 1920,0

@@ -1,0 +1,5 @@
+#!/bin/sh
+pushd $HOME/scripts/install
+./yay
+./apps
+popd

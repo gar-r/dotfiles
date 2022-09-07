@@ -1,0 +1,124 @@
+#!/bin/sh
+
+core=(
+    acpi
+    bluez
+    bluez-utils
+    cifs-utils
+    firefox
+    fwupd
+    gnupg
+    make
+    man-db
+    man-pages
+    mkinitcpio-firmware
+    nfs-utils
+    ntfs-3g
+    openssh
+    polkit
+)
+
+utils=(
+    baobab
+    checkupdates-aur
+    dust
+    fd
+    gopass
+    gopass-jsonapi
+    gparted
+    htop
+    neofetch
+    p7zip
+    pacman-contrib
+    pacman-mirrorlist
+    powertop
+    rsync
+    udisks2
+    upower
+)
+
+
+languages=(
+    go
+    jre-openjdk
+    lua
+    npm
+    nodejs
+    python
+    rustup
+)
+
+shell=(
+    icat
+    kitty
+    zsh
+)
+
+desktop=(
+    dunst
+    slurp
+    shotman
+    sway
+    swaybg
+    swayidle
+    swaylock-effects-git
+    polkit-gnome
+    qt5ct
+    xorg-xwayland
+    wdisplays
+    wl-clipboard
+    wofi
+)
+
+theme=(
+    arc-icon-theme
+    catppuccin-gtk-theme-mocha
+    noto-fonts
+    otf-font-awesome
+    ttf-fira-code
+    ttf-fira-mono
+    ttf-fira-sans
+    ttf-firacode-nerd
+    ttf-liberation
+    ttf-nerd-fonts-symbols
+)
+
+media=(
+    brightnessctl
+    easyeffects
+    gimp
+    mpv
+    noisetorch
+    pipewire
+    wireplumber
+)
+
+gaming=(
+    discord
+    gamemode
+    lutris
+    proton-ge-custom-bin
+    steam
+    wine-ge-custom
+)
+
+work=(
+    code
+    neovim
+    neovim-drop-in
+    onlyoffice-bin
+)
+
+
+yay --removemake --nocleanmenu --nodiffmenu --noeditmenu -Sy \
+    "${core[@]}"       \
+    "${utils[@]}"      \
+    "${languages[@]}"  \
+    "${shell[@]}"      \
+    "${desktop[@]}"    \
+    "${theme[@]}"      \
+    "${media[@]}"      \
+    "${gaming[@]}"     \
+    "${work[@]}"
+
+

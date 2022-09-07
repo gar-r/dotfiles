@@ -1,0 +1,16 @@
+font "Noto Sans 10"
+default_border pixel 3
+
+gaps {
+  inner 8
+  outer 3
+}
+
+# class                   border       background        text        indicator
+client.focused            $maroon      $maroon           $text       $rosewater
+client.focused_inactive   $overlay0    $overlay0         $text       $rosewater
+client.unfocused          $overlay0    $overlay0         $text       $rosewater
+client.urgent             $peach       $peach            $peach      $overlay0
+client.background         $base
+
+

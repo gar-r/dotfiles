@@ -1,0 +1,2 @@
+bindsym XF86KbdBrightnessUp exec asusctl -n
+bindsym XF86KbdBrightnessDown exec asusctl -p
