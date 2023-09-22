@@ -1,19 +1,21 @@
 bar {
     position top
+    height 30
 
-    font "Noto Mono 10, FontAwesome 10"
+    font "monospace 11"
     tray_padding 5
+    separator_symbol "  "
     workspace_min_width 30
 
-    status_command /usr/local/bin/okki-status
-    status_padding 3
+    status_command /usr/bin/okki-status
+    status_padding 0
     
     colors {
       statusline $text
       background $base
-      focused_workspace   $maroon      $maroon      $overlay0
-      active_workspace    $maroon      $maroon      $overlay0
+      focused_workspace   $blue        $blue        $overlay0
+      active_workspace    $blue        $blue        $overlay0
       inactive_workspace  $base        $base        $text
-      urgent_workspace    $rosewater   $rosewater   $text
+      urgent_workspace    $red         $red         $text
     }
 }

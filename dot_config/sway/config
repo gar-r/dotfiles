@@ -15,7 +15,8 @@ set {
   $menu wofi --show drun | xargs swaymsg exec --
   $apps wofi --show run  | xargs swaymsg exec --
   $web firefox
-  $refresh "/usr/local/bin/okki-refresh"
+
+  $refresh /usr/bin/okki-refresh
 } 
 
 include catppuccin-mocha

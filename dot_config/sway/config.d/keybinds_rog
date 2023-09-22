@@ -1,2 +1,6 @@
+bindsym XF86MonBrightnessUp exec brightnessctl set 5%+; exec $refresh brightness
+bindsym Shift+XF86MonBrightnessUp exec brightnessctl set 1%+; exec $refresh brightness
+bindsym XF86MonBrightnessDown exec brightnessctl set 5%-; exec $refresh brightness
+bindsym Shift+XF86MonBrightnessDown exec brightnessctl set 1%-; exec $refresh brightness
 bindsym XF86KbdBrightnessUp exec asusctl -n
 bindsym XF86KbdBrightnessDown exec asusctl -p
