@@ -6,11 +6,11 @@ gaps {
   outer 3
 }
 
-# class                   border       background        text        indicator
-client.focused            $maroon      $maroon           $text       $rosewater
-client.focused_inactive   $overlay0    $overlay0         $text       $rosewater
-client.unfocused          $overlay0    $overlay0         $text       $rosewater
-client.urgent             $peach       $peach            $peach      $overlay0
+# class                   border     background   text     indicator
+client.focused            $blue      $blue        $text    $rosewater
+client.focused_inactive   $overlay0  $overlay0    $text    $rosewater
+client.unfocused          $overlay0  $overlay0    $text    $rosewater
+client.urgent             $red       $red         $red     $overlay0
 client.background         $base
 
 
