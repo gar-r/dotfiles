@@ -1,0 +1,42 @@
+modules:
+  - provider:
+      type: updates
+      refresh_minutes: 60
+      check_command: '/usr/bin/checkupdates'
+      ignore_exit_error: true
+      update_command: '/usr/bin/yay'
+      update_command_args: [ "-Syu" ]
+    appearance:
+      format: '󰣇  {{ .Text }}'
+  - provider:
+      type: memory
+    appearance:
+      format: '󰍛 {{ .Text }}'
+    variants:
+      - pattern: '^(1\d\d|9\d)%$'
+        appearance:
+          urgent: true
+  - provider:
+      type: volume
+      show_mic: true
+    appearance:
+      format: '
+        {{if .SinkMuted }}󰝟 {{else}}󰖀 {{ .SinkVolume }}%{{end}}
+        {{ " " }}
+        {{if .SourceMuted}}󰍭 {{else}}󰍬 {{ .SourceVolume }}%{{end}}'
+  - provider:
+      type: layout
+      keyboard_identifier: '6940:6976:Corsair_Corsair_Gaming_K63_Keyboard'
+      shorten: true
+    appearance:
+      format: '󰌌 {{ .Text }}'
+  - provider:
+      type: clock
+      clock_format: "15:04"
+      clock_format_alternate: "2006-01-02"
+    appearance:
+      format: '󰥔 {{ .Text }}'
+    variants:
+      - pattern: '^\d{4}-\d{2}-\d{2}$'
+        appearance:
+          format: '󰃭 {{ .Text }}'
