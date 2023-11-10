@@ -9,6 +9,16 @@ modules:
     appearance:
       format: '󰣇  {{ .Text }}'
   - provider:
+      type: battery
+      device: battery_hidpp_battery_0
+    appearance:
+      format: '󰍽 {{ .Percentage }}%'
+    variants:
+      - template: '{{if le .Percentage 10}}low{{end}}'
+        pattern: '^low$'
+        appearance:
+          urgent: true
+  - provider:
       type: memory
     appearance:
       format: '󰍛 {{ .Text }}'
