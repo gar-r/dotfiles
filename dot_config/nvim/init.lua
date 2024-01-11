@@ -1,5 +1,5 @@
 require("config.core")
-require("config.bootstrap")
+require("config.lazy")
 require("lazy").setup({
 	spec = "plugins",
 	install = { colorscheme = { "catppuccin" } },

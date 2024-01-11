@@ -8,11 +8,11 @@ return {
     },
     keys = {
         {
-            "<leader>e",
+            "<leader>n",
             function()
-                require("neo-tree.command").execute({toggle = true})
+                require("neo-tree.command").execute({ toggle = true })
             end,
-            desc = "Neotree Toggle",
+            desc = "Neotree",
         },
     },
 }
