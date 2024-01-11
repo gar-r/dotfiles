@@ -5,7 +5,7 @@ return {
         build = ":MasonUpdate",
         config = function(_, opts)
             require("mason").setup(opts)
-        end
+        end,
     },
     {
         "williamboman/mason-lspconfig.nvim",
@@ -46,7 +46,8 @@ return {
         },
         config = function()
             local lsp = require("lspconfig")
-            lsp.lua_ls.setup({})
+            local capabilities = require("cmp_nvim_lsp").default_capabilities()
+            lsp.lua_ls.setup({ capabilities = capabilities })
         end,
     },
 }
