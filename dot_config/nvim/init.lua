@@ -1,5 +1,5 @@
 require("config.core")
-require("config.lazy")
+require("config.lazyvim")
 require("lazy").setup({
 	spec = "plugins",
 	install = { colorscheme = { "catppuccin" } },
