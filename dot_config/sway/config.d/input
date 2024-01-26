@@ -6,6 +6,6 @@ input "type:keyboard" {
 }
 
 input "type:touchpad" {
-  dwt enabled
+  dwt disabled
   tap enabled
 }
