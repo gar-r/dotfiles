@@ -46,5 +46,5 @@ export PATH=$PATH:$ANDROID_HOME/platform-tools
 
 # Aliases
 alias mountnas="sudo mount -t nfs 192.168.0.235:/volume1/share /mnt/nas"
-alias dropoff="sudo rsync -aP --remove-source-files $HOME/Downloads/*.torrent /mnt/nas/dropoff"
+alias dropoff="mv $HOME/Downloads/*.torrent /mnt/nas/dropoff"
 alias icat="kitty +kitten icat"
