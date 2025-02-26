@@ -1,1 +1,11 @@
-for_window [class="battle.net.exe"] floating enable
+for_window {
+    [window_role="dialog"] floating enable
+    [window_role="pop-up"] floating enable
+    [window_role="bubble"] floating enable
+    [window_type="dialog"] floating enable
+    [title="(?:Open|Save) (?:File|Folder|As)"] floating enable, resize set 800 600
+    [app_id="firefox" title="Picture-in-Picture"] floating enable, resize set 640 480
+    [title="Battle.net"] floating enable, resize set 1000 780
+    [class="steam_app.*"] inhibit_idle
+    [class="Pinentry.*"] floating enable
+}
