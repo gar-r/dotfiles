@@ -9,7 +9,7 @@ bindsym $mod+Return exec $term
 bindsym $mod+d exec $menu
 bindsym $modp+d exec $apps
 bindsym $mod+w exec $web
-bindsym $modp+w exec $web --private-window
+bindsym $modp+w exec $webprivate
 
 ## tiling keybinds
 #

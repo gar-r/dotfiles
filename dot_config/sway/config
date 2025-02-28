@@ -14,7 +14,8 @@ set {
   $term kitty
   $menu wofi --show drun | xargs swaymsg exec --
   $apps wofi --show run  | xargs swaymsg exec --
-  $web firefox
+  $web brave
+  $webprivate brave --incognito
 
   $refresh /usr/bin/okki-refresh
 } 
