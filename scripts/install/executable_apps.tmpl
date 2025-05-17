@@ -1,128 +1,15 @@
 #!/bin/sh
 
-core=(
-    acpi
-    bluez
-    bluez-utils
-    cifs-utils
-    librewolf-bin
-    fwupd
-    gnupg
-    make
-    man-db
-    man-pages
-    mkinitcpio-firmware
-    nfs-utils
-    ntfs-3g
-    openssh
-    polkit
-)
-
-utils=(
-    baobab
-    checkupdates-aur
-    dust
-    fd
-    pass
-    pass-otp
-    gparted
-    htop
-    neofetch
-    p7zip
-    pacman-contrib
-    pacman-mirrorlist
-    powertop
-    rsync
-    tldr
-    udisks2
-    upower
-)
-
-
-languages=(
-    go
-    jre-openjdk
-    lua
-    npm
-    nodejs
-    python
-    rustup
-)
-
-shell=(
-    bash
-    bash-completion
-    icat
-    kitty
-    tldr
-)
-
-desktop=(
-    dunst
-    nwg-look
-    okki-status
-    slurp
-    shotman
-    sway
-    swaybg
-    swayidle
-    swaylock-effects-git
-    polkit-gnome
-    qt5ct
-    xdg-desktop-portal-wlr
-    xorg-xwayland
-    wdisplays
-    wl-clipboard
-    wofi
-)
-
-theme=(
+apps=(
     arc-icon-theme
     arc-gtk-theme
-    noto-fonts
-    otf-font-awesome
-    ttf-fira-code
-    ttf-fira-mono
-    ttf-fira-sans
-    ttf-firacode-nerd
-    ttf-liberation
-    ttf-nerd-fonts-symbols
-)
-
-media=(
-    brightnessctl
-    easyeffects
-    gimp
-    mpv
-    pipewire
-    wireplumber
-)
-
-gaming=(
-    gamemode
-    proton-ge-custom-bin
-    steam
-    wine-ge-custom
-)
-
-work=(
-    libreoffice-fresh
-    neovim
+    checkupdates-aur
+    mkinitcpio-firmware
     neovim-drop-in
-    ripgrep
-    zed
+    swaylock-effects
+    shotman
+    wdisplays
 )
-
 
 yay --removemake --nocleanmenu --nodiffmenu --noeditmenu -Sy \
-    "${core[@]}"       \
-    "${utils[@]}"      \
-    "${languages[@]}"  \
-    "${shell[@]}"      \
-    "${desktop[@]}"    \
-    "${theme[@]}"      \
-    "${media[@]}"      \
-    "${gaming[@]}"     \
-    "${work[@]}"
-
-
+    "${apps[@]}"

@@ -1,12 +1,4 @@
 #!/bin/sh
-
-# install base tools
-sudo pacman --noconfirm -Sy         \
-    base-devel                      \
-    git                             \
-    go
-
-# install yay
 git clone https://aur.archlinux.org/yay.git /tmp/yay
 pushd /tmp/yay
 makepkg -si
