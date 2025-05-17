@@ -15,7 +15,7 @@ encryption = "gpg"
 Initialize and apply:
 
 ```sh
-chezmoi init ssh://git@ssh.okki.hu:222/garric/dotfiles.git
+chezmoi init git@github.com:gar-r/dotfiles.git
 chezmoi apply
 ```
 
