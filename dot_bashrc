@@ -9,6 +9,7 @@ export OSH='/home/garric/.oh-my-bash'
 
 OSH_THEME="minimal"
 OMB_USE_SUDO=true
+DISABLE_UPDATE_PROMPT=true
 
 completions=(
   git
