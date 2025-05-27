@@ -1,2 +1,8 @@
 #!/bin/sh
-ln -sf config-$HOSTNAME.yaml config.yaml
+
+cfg="arcanist"
+if [[ "$HOSTNAME" == "rog" ]]; then
+    cfg="rog"
+fi
+
+ln -sf config-$cfg.yaml config.yaml
