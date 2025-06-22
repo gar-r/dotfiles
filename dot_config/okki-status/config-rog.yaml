@@ -14,11 +14,13 @@ modules:
     appearance:
       format: '
         {{if eq .Text "?"}}󰤫
-        {{else if ge .SignalStrength -25 }}󰤨
-        {{else if ge .SignalStrength -50 }}󰤥
-        {{else if ge .SignalStrength -75 }}󰤢
-        {{else}}󰤟
-        {{end}} {{ .SSID }}'
+        {{else}}
+          {{if ge .SignalStrength -25 }}󰤨
+          {{else if ge .SignalStrength -50 }}󰤥
+          {{else if ge .SignalStrength -75 }}󰤢
+          {{else}}󰤟
+          {{end}} {{ .SSID }}
+        {{end}}'
   - provider:
       type: memory
     appearance:
