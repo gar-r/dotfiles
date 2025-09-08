@@ -29,6 +29,7 @@ plugins=(
 )
 
 source "$OSH"/oh-my-bash.sh
+. "$HOME/.cargo/env"
 
 # User configuration
 export LANG=en_US.UTF-8
