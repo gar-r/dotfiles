@@ -24,7 +24,7 @@ return {
             "json",
             "yaml",
             "xml",
-            "toml",
+            "tonl",
             "query",
             "markdown",
             "markdown_inline",
@@ -46,7 +46,14 @@ return {
         },
         indent = { enable = true },
         folds = { enable = true },
-        incremental_selection = { enable = true }, 
+        incremental_selection = { 
+            enable = true,
+            keymaps = {
+                init_selection = "<C-space>",
+                node_incremental = "<C-space>",
+                scope_incremental = false,
+            },
+        }, 
     },
     config = function(_, opts)
         require("nvim-treesitter").setup(opts)

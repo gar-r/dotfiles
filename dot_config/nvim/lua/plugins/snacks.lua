@@ -34,15 +34,10 @@ return {
                 cycle = false,
             },
         },
-        terminal = { 
-            enabled = true,
-            win = {
-                height = 0.25,
-            },
-        },
+        terminal = { enabled = true },
     },
     keys = {
-        { "<C-`>", function() Snacks.terminal.toggle() end, desc = "toggle terminal" },
+        { "<C-`>", function() Snacks.terminal.toggle(nil, {win = {height = 0.25}}) end, desc = "toggle terminal" },
         { "<leader>ft", function() Snacks.explorer() end, desc = "file explorer" },
         { "<leader>ff", function() Snacks.picker.smart() end, desc = "find files" },
         { "<leader>sf", function() Snacks.picker.files() end, desc = "search files" },
