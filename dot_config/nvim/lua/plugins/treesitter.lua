@@ -3,9 +3,7 @@ return {
   lazy = false,
   branch = "main",
   version = false,
-  build = function()
-    require("nvim-treesitter").update(nil, { summary = true })
-  end,
+  build = ":TSUpdate",
   opts_extend = { "ensure_installed" },
   opts = {
     ensure_installed = {
@@ -36,7 +34,7 @@ return {
     highlight = {
       enable = true,
       disable = function()
-        local max_size = 500 * 1024         -- 500 KB
+        local max_size = 500 * 1024 -- 500 KB
         local ok, stats = pcall(vim.loop.fs_stat, vim.api.nvim_buf_get_name(buf))
         if ok and stats and stats.size > max_size then
           return true
