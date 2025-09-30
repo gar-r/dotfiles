@@ -19,11 +19,11 @@ nmap("n", "<leader>ff", vim.lsp.buf.format, "format buffer")
 nmap("n", "x", '"_x')
 
 vim.api.nvim_create_autocmd("TextYankPost", {
-    desc = "Highlight yanked text",
-    group = vim.api.nvim_create_augroup("user-highlight-yank", { clear = true}),
-    callback = function()
-        vim.highlight.on_yank()
-    end,
+  desc = "Highlight yanked text",
+  group = vim.api.nvim_create_augroup("user-highlight-yank", { clear = true }),
+  callback = function()
+    vim.highlight.on_yank()
+  end,
 })
 
 -- tabs
@@ -41,7 +41,7 @@ nmap("n", "<leader>sx", "<cmd>close<CR>", "close current split")
 
 -- file
 nmap("n", "<leader>fp", function()
-    local filePath = vim.fn.expand("%:p")
-    vim.fn.setreg("+", filePath)
-    print("file path yanked: " .. filePath)
+  local filePath = vim.fn.expand("%:p")
+  vim.fn.setreg("+", filePath)
+  print("file path yanked: " .. filePath)
 end, "yank file path")

@@ -1,4 +1,4 @@
 return {
-    "nvzone/showkeys",
-    cmd = "ShowkeysToggle",
+  "nvzone/showkeys",
+  cmd = "ShowkeysToggle",
 }
