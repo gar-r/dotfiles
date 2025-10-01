@@ -7,7 +7,11 @@ now(function()
   })
 end)
 
+now(function() require("mini.icons").setup() end)
+now(function() require("mini.completion").setup() end)
+
 later(function() require("mini.comment").setup() end)
 later(function() require("mini.pairs").setup() end)
+later(function() require("mini.snippets").setup() end)
 later(function() require("mini.surround").setup() end)
 

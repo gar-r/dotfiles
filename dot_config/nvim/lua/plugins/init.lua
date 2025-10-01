@@ -17,5 +17,7 @@ require("mini.deps").setup({ path = { package = path_package } })
 
 -- plugin list
 require("plugins.mini")
+require("plugins.catppuccin")
+require("plugins.oil")
 require("plugins.lsp")
 require("plugins.treesitter")
