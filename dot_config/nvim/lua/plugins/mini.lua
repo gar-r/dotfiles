@@ -48,7 +48,10 @@ later(function() require("mini.move").setup() end)
 later(function() require("mini.pairs").setup() end)
 later(function() require("mini.splitjoin").setup() end)
 later(function() require("mini.surround").setup() end)
-later(function() require("mini.trailspace").setup() end)
+later(function()
+  require("mini.trailspace").setup()
+  vim.keymap.set("n", "<leader>cw", MiniTrailspace.trim, { desc = "clear trailing whitespace" })
+end)
 
 later(function() require("mini.bracketed").setup() end)
 later(function() require("mini.bufremove").setup() end)
@@ -63,6 +66,27 @@ later(function()
   vim.keymap.set("n", "<leader>fg", p.grep_live, { desc = "live grep" })
   vim.keymap.set("n", "<leader>fb", p.buffers, { desc = "find buffer" })
   vim.keymap.set("n", "<leader>fh", p.help, { desc = "find help" })
+  vim.keymap.set("n", "<leader>fd", function()
+    MiniPick.start({    -- this is a custom picker for diagnostics
+      source = {
+        name = "Diagnostics",
+        items = function()
+          local items = {}
+          for _, d in ipairs(vim.diagnostic.get()) do
+            local sev = ({"E", "W", "I", "H"})[d.severity] or "?"
+            local msg = (d.message):gsub("\n", " "):sub(1, 120)
+            table.insert(items, {
+              text = string.format("[%s]: %s", sev, msg),
+              bufnr = d.bufnr,
+              lnum = d.lnum + 1,
+              col = d.col + 1,
+            })
+          end
+          return items
+        end,
+      },
+    })
+  end, {desc = "find diagnostic"})
 end)
 
 later(function()
