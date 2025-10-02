@@ -2,7 +2,7 @@ MiniDeps.now(function()
 
   MiniDeps.add({
     source = "mason-org/mason-lspconfig.nvim",
-    depends = {      
+    depends = {
       "mason-org/mason.nvim",
       "neovim/nvim-lspconfig",
     },
@@ -16,7 +16,7 @@ MiniDeps.now(function()
       "gopls",
     },
   })
-  
+
 end)
 
 MiniDeps.later(function()

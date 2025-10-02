@@ -4,6 +4,10 @@ MiniDeps.now(function()
   local oil = require("oil")
   oil.setup({
     skip_confirm_for_simple_edits = true,
+    keymaps = { -- disable some conflicting keymaps
+      ["<C-h>"] = false,
+      ["<C-l>"] = false,
+    },
   })
 
   vim.keymap.set("n", "-", oil.open, { desc = "file explorer" })
