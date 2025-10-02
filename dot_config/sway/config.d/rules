@@ -8,4 +8,6 @@ for_window {
     [title="Battle.net"] floating enable, inhibit_idle, resize set 1000 780
     [class=".*steam.*"] inhibit_idle
     [class="Pinentry.*"] floating enable
+    [app_id=".*"] inhibit_idle fullscreen
+    [class=".*"] inhibit_idle fullscreen
 }
