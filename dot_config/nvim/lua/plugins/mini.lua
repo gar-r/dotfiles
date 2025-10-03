@@ -1,3 +1,5 @@
+local km = require("core.keymaps")
+
 local now, later = MiniDeps.now, MiniDeps.later
 
 -- sets sane common opts, also sets leader key
@@ -50,7 +52,9 @@ later(function() require("mini.splitjoin").setup() end)
 later(function() require("mini.surround").setup() end)
 later(function()
   require("mini.trailspace").setup()
-  vim.keymap.set("n", "<leader>cw", MiniTrailspace.trim, { desc = "clear trailing whitespace" })
+  km.set("n", "<leader>cw", MiniTrailspace.trim, {
+    desc = "clear trailing whitespace"
+  })
 end)
 
 later(function() require("mini.bracketed").setup() end)
@@ -62,11 +66,11 @@ later(function() require("mini.diff").setup() end)
 later(function()
   require("mini.pick").setup()
   local p = MiniPick.builtin
-  vim.keymap.set("n", "<leader>ff", p.files, { desc = "find file" })
-  vim.keymap.set("n", "<leader>fg", p.grep_live, { desc = "live grep" })
-  vim.keymap.set("n", "<leader>fb", p.buffers, { desc = "find buffer" })
-  vim.keymap.set("n", "<leader>fh", p.help, { desc = "find help" })
-  vim.keymap.set("n", "<leader>fd", function()
+  km.set("n", "<leader>ff", p.files, { desc = "find file" })
+  km.set("n", "<leader>fg", p.grep_live, { desc = "live grep" })
+  km.set("n", "<leader>fb", p.buffers, { desc = "find buffer" })
+  km.set("n", "<leader>fh", p.help, { desc = "find help" })
+  km.set("n", "<leader>fd", function()
     MiniPick.start({    -- this is a custom picker for diagnostics
       source = {
         name = "Diagnostics",

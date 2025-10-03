@@ -10,7 +10,8 @@ MiniDeps.now(function()
     },
   })
 
-  vim.keymap.set("n", "-", oil.open, { desc = "file explorer" })
-  vim.keymap.set("n", "<C-->", oil.toggle_float, { desc = "floaing file explorer" })
+  local km = require("core.keymaps")
+  km.set("n", "-", oil.open, { desc = "file explorer" })
+  km.set("n", "<C-->", oil.toggle_float, { desc = "floaing file explorer" })
 
 end)
