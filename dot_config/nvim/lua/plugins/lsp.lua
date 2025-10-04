@@ -1,10 +1,11 @@
 MiniDeps.now(function()
 
   MiniDeps.add({
-    source = "mason-org/mason-lspconfig.nvim",
+    source = "neovim/nvim-lspconfig",
     depends = {
       "mason-org/mason.nvim",
-      "neovim/nvim-lspconfig",
+      "mason-org/mason-lspconfig.nvim",
+      "WhoIsSethDaniel/mason-tool-installer.nvim",
     },
   })
 
@@ -16,7 +17,17 @@ MiniDeps.now(function()
       "gopls",
     },
   })
+  require("mason-tool-installer").setup({})
 
+  -- lsp key mappings
+  local km = require("core.keymaps")
+  km.set("n", "grn", vim.lsp.buf.rename, { desc = "lsp: rename" })
+  km.set("n", "gra", vim.lsp.buf.code_action, { desc = "lsp: code action" })
+  km.set("n", "grr", vim.lsp.buf.references, { desc = "lsp: references" })
+  km.set("n", "gri", vim.lsp.buf.implementation, { desc = "lsp: implementation" })
+  km.set("n", "grd", vim.lsp.buf.definition, { desc = "lsp: definition" })
+  km.set("n", "grD", vim.lsp.buf.declaration, { desc = "lsp: declaration" })
+  km.set("n", "grt", vim.lsp.buf.type_definition, { desc = "lsp: type definition" })
 end)
 
 MiniDeps.later(function()
