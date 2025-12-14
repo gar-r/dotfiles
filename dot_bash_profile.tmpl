@@ -20,5 +20,8 @@ then
   export XDG_CURRENT_DESKTOP=sway
   export _JAVA_AWT_WM_NONREPARENTING=1
   export STUDIO_JDK=/usr/lib/jvm/java-14-openjdk
+  {{- if eq .chezmoi.hostname "rog" }}
+  export WLR_RENDER_NO_EXPLICIT_SYNC=1
+  {{- end }}
   exec sway
 fi
