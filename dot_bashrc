@@ -42,7 +42,7 @@ export ANDROID_HOME=$HOME/Android/Sdk
 export PATH=$PATH:$ANDROID_HOME/emulator
 export PATH=$PATH:$ANDROID_HOME/platform-tools
 
-alias mountnas="sudo mount -t nfs 192.168.0.235:/volume1/share /mnt/nas"
+alias mountnas="sudo mount -t nfs minitiger:/volume1/share /mnt/nas"
 alias dropoff="mv $HOME/Downloads/*.torrent /mnt/nas/dropoff"
 alias update="yay -Syu --noconfirm"
 
