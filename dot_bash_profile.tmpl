@@ -5,15 +5,10 @@ if [ -f /usr/share/bash-completion/bash_completion ]; then
   . /usr/share/bash-completion/bash_completion
 fi
 
-# gpg agent
+# gpg agent (also acts as ssh agent)
 export GPG_TTY=$(tty)
-gpg-connect-agent /bye
-
-# ssh agent
-if [ -z "$SSH_AUTH_SOCK" ]; then
-  export SSH_AUTH_SOCK=$(gpgconf --list-dirs agent-ssh-socket)
-fi
-
+export SSH_AUTH_SOCK=$(gpgconf --list-dirs agent-ssh-socket)
+gpgconf --launch gpg-agent
 
 if [[ "$(tty)" = "/dev/tty1" ]]
 then
