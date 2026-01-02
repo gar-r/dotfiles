@@ -4,6 +4,11 @@ case $- in
     *) return;;
 esac
 
+# gpg agent configuration (also acts as ssh agent)
+export GPG_TTY=$(tty)
+export SSH_AUTH_SOCK=$(gpgconf --list-dirs agent-ssh-socket)
+gpg-connect-agent updatestartuptty /bye > /dev/null 2>&1
+
 # Path to your oh-my-bash installation.
 export OSH='/home/garric/.oh-my-bash'
 

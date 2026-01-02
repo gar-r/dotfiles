@@ -5,11 +5,6 @@ if [ -f /usr/share/bash-completion/bash_completion ]; then
   . /usr/share/bash-completion/bash_completion
 fi
 
-# gpg agent (also acts as ssh agent)
-export GPG_TTY=$(tty)
-export SSH_AUTH_SOCK=$(gpgconf --list-dirs agent-ssh-socket)
-gpgconf --launch gpg-agent
-
 if [[ "$(tty)" = "/dev/tty1" ]]
 then
   export XDG_CURRENT_DESKTOP=sway
