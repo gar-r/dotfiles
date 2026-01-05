@@ -7,6 +7,7 @@ fi
 
 if [[ "$(tty)" = "/dev/tty1" ]]
 then
+  export XDG_SESSION_TYPE=wayland
   export XDG_CURRENT_DESKTOP=sway
   export _JAVA_AWT_WM_NONREPARENTING=1
   export STUDIO_JDK=/usr/lib/jvm/java-14-openjdk
