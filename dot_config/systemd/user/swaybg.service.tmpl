@@ -1,0 +1,12 @@
+[Unit]
+PartOf=graphical-session.target
+After=graphical-session.target
+Requisite=graphical-session.target
+
+[Service]
+{{- if eq .chezmoi.hostname "arcanist" }}
+ExecStart=/usr/bin/swaybg -m fill -i "%h/wallpapers/kolbiek_3840_1080.jpg"
+{{- else }}
+ExecStart=/usr/bin/swaybg -m fill -i "%h/wallpapers/kolbi_1920_1080.jpg"
+{{- end }}
+Restart=on-failure
