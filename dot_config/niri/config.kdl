@@ -69,6 +69,11 @@ window-rule {
 }
 
 window-rule {
+    match app-id=r#"steam"# title=r#".*(Friends|Settings|Properties).*"#
+    open-floating true
+}
+
+window-rule {
     match is-window-cast-target=true
     focus-ring {
         active-color "#f38ba8"
