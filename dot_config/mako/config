@@ -1,7 +1,6 @@
-# ~/.config/mako/config
-# Catppuccin-inspired visuals only (+ max-visible)
+# Catppuccin-themed mako notifications
 
-font=Fira Mono 10
+font=Commit Mono Nerd 10
 
 # Geometry
 width=360
@@ -10,12 +9,12 @@ anchor=top-right
 layer=overlay
 
 # Spacing
-padding=14
-margin=12
+padding=8
+margin=8
 
 # Shape
-border-size=2
-border-radius=0
+border-size=4
+border-radius=8
 
 # Icons
 icons=1
@@ -25,27 +24,15 @@ max-icon-size=64
 max-visible=5
 sort=-time
 
-# Timeouts (kept neutral)
+# Timeouts
 default-timeout=5000
 ignore-timeout=1
 
-# Colors (Catppuccin Mocha-like, with slight transparency)
-background-color=#1e1e2ee6
-text-color=#cdd6f4ff
-border-color=#89b4faff
+background-color=#11111b
+text-color=#cdd6f4
+border-color=#313244
 
-# Progress bar
-progress-color=over #313244ff
-
-# Urgency styling (visual accents only)
-[urgency=low]
-border-color=#74c7ecff
-
-[urgency=normal]
-border-color=#89b4faff
+progress-color=over #7287fd
 
 [urgency=critical]
-border-color=#f38ba8ff
-background-color=#1e1e2ee6
-text-color=#cdd6f4ff
-
+border-color=#f38ba8
