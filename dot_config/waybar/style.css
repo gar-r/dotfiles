@@ -20,12 +20,26 @@ button {
 
 button:hover {
   background-color: @crust;
-  color: @text;
 }
 
 tooltip {
   border: 2px solid @crust;
   background-color: @base;
+}
+
+menu {
+  border: 2px solid @crust;
+  background: @base;
+  color: @text;
+  font-size: 18px;
+  padding: 4px 4px;
+}
+
+menuitem {
+}
+
+menuitem:hover {
+  background-color: @highlight;
 }
 
 @import "styles/idle.css";

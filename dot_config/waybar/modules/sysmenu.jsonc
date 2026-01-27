@@ -5,11 +5,18 @@
     "interval": 3600,
     "hide-empty-text": true,
     "on-click": "kitty -e /usr/bin/yay -Syu --noconfirm",
-    "signal": 8
+    "signal": 8,
   },
   "custom/shutdown": {
     "format": "󰐥",
-    "on-click": "wlogout",
-    "tooltip": false
-  }
+    "tooltip": false,
+    "menu": "on-click",
+    "menu-file": "~/.config/waybar/scripts/power-menu.xml",
+    "menu-actions": {
+      "lock": "gtklock -d",
+      "suspend": "systemctl suspend",
+      "reboot": "systemctl reboot",
+      "shutdown": "systemctl poweroff",
+    },
+  },
 }
