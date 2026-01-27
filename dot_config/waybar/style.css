@@ -31,11 +31,13 @@ menu {
   border: 2px solid @crust;
   background: @base;
   color: @text;
-  font-size: 18px;
   padding: 4px 4px;
 }
 
 menuitem {
+  padding: 4px 4px;
+  font-size: 18px;
+  font-weight: bold;
 }
 
 menuitem:hover {
