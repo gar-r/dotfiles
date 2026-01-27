@@ -1,0 +1,22 @@
+{
+  "cpu": {
+    "interval": 5,
+    "format": "",
+    "format-alt": " {usage}%",
+    "states": {
+      "warning": 50,
+      "critical": 80
+    },
+    "tooltip": false
+  },
+  "memory": {
+    "interval": 5,
+    "format": "",
+    "format-alt": " {used:0.0f}GB {percentage}%",
+    "states": {
+      "warning": 70,
+      "critical": 90
+    },
+    "tooltip": false
+  }
+}

@@ -1,0 +1,15 @@
+{
+  "custom/updates": {
+    "exec": "~/.config/waybar/scripts/updates.sh",
+    "return-type": "json",
+    "interval": 3600,
+    "hide-empty-text": true,
+    "on-click": "kitty -e /usr/bin/yay -Syu --noconfirm",
+    "signal": 8
+  },
+  "custom/shutdown": {
+    "format": "󰐥",
+    "on-click": "wlogout",
+    "tooltip": false
+  }
+}

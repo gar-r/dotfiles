@@ -1,0 +1,15 @@
+#wireplumber {
+    background-color: @base;
+    padding: 0px 5px;
+}
+
+#backlight {
+    background-color: @base;
+    padding: 0px 10px;
+}
+
+#custom-knobs-decorator {
+    color: @base;
+    background-color: @mantle;
+    font-size: 23px;
+}

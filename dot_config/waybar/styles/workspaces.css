@@ -1,0 +1,19 @@
+#custom-workspaces-decorator-left,
+#custom-workspaces-decorator-right {
+  color: @base;
+  font-size: 23px;
+}
+
+#workspaces {
+  background-color: @base;
+  padding: 0px 0px;
+}
+
+#workspaces button.active label,
+#workspaces button.focused label {
+  color: @highlight;
+}
+
+#workspaces button.active label {
+  font-size: 16px;
+}

@@ -2,65 +2,37 @@
   "layer": "top",
   "position": "top",
   "modules-left": [
+    "idle_inhibitor",
+    "custom/workspaces-decorator-left",
     "niri/workspaces",
-    "wlr/taskbar"
+    "custom/workspaces-decorator-right",
+    "niri/window"
   ],
   "modules-center": [],
   "modules-right": [
-    "niri/language",
+    "bluetooth",
+    "network",
+    "custom/network-decorator",
+    "group/wireplumber",
+    "backlight",
+    "custom/knobs-decorator",
+    "cpu",
+    "memory",
     "battery",
+    "custom/battery-decorator",
     "clock",
-    "custom/power"
+    "custom/updates",
+    "custom/shutdown"
   ],
-  "niri/workspaces": {
-    "format": "{icon}",
-    "format-icons": {
-      "default": "󰄰",
-      "active": "󰄯"
-    }
-  },
-  "niri/language": {
-    "format": "{short}",
-    "on-click": "sh -c '$HOME/.config/waybar/scripts/toggle-layout.sh'"
-  },
-  "clock": {
-    "format": "{:%R}",
-    "format-alt": "{:%F | %R}",
-    "tooltip-format": "<tt><small>{calendar}</small></tt>",
-    "calendar": {
-      "format": {
-        "today": "<span color='#f38ba8'><b>{}</b></span>"
-      }
-    }
-  },
-  "battery": {
-    "format": "{capacity}%  {icon}",
-    "format-charging": "{capacity}%  ",
-    "format-icons": [
-      "",
-      "",
-      "",
-      "",
-      ""
-    ],
-    "states": {
-      "warning": 20,
-      "critical": 10
-    },
-    "tooltip": false
-  },
-  "wlr/taskbar": {
-    "icon-size": 16,
-    "icon-theme": "Tela-circle-grey",
-    "tooltip-format": "{title}",
-    "on-click": "activate",
-    "on-click-middle": "close"
-  },
-  "custom/power": {
-    "format": "{}",
-    "exec": "echo ⏻",
-    "interval": "once",
-    "tooltip": "Power menu",
-    "on-click": "wlogout"
-  }
+  "include": [
+    "~/.config/waybar/modules/idle.jsonc",
+    "~/.config/waybar/modules/workspaces.jsonc",
+    "~/.config/waybar/modules/window.jsonc",
+    "~/.config/waybar/modules/network.jsonc",
+    "~/.config/waybar/modules/knobs.jsonc",
+    "~/.config/waybar/modules/sysinfo.jsonc",
+    "~/.config/waybar/modules/battery.jsonc",
+    "~/.config/waybar/modules/clock.jsonc",
+    "~/.config/waybar/modules/sysmenu.jsonc"
+  ]
 }

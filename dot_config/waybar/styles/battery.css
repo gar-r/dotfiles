@@ -1,0 +1,18 @@
+#battery {
+  background-color: @base;
+  font-weight: bold;
+  padding: 0px 10px;
+}
+
+#battery.warning {
+  color: @warning;
+}
+
+#battery.critical {
+  color: @urgent;
+}
+
+#custom-battery-decorator {
+  color: @base;
+  font-size: 23px;
+}

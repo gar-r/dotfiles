@@ -6,7 +6,7 @@ spawn-sh-at-startup "/usr/lib/polkit-gnome/polkit-gnome-authentication-agent-1 &
 input {
     keyboard {
         xkb {
-            layout "us,ru"
+            layout "us,hu"
             options "grp:rctrl_rshift_toggle,compose:ralt,ctrl:nocaps"
         }
         track-layout "global"
@@ -20,7 +20,7 @@ input {
 }
 
 layout {
-    gaps 12
+    gaps 10
     preset-column-widths {
         proportion 0.33333
         proportion 0.5

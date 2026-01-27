@@ -1,0 +1,47 @@
+{
+  "group/wireplumber": {
+    "orientation": "horizontal",
+    "modules": [
+      "wireplumber#output",
+      "wireplumber#input"
+    ],
+    "drawer": {
+      "transition-left-to-right": false
+    }
+  },
+  "wireplumber#output": {
+    "format": "{icon} {volume}%",
+    "format-muted": "󰝟",
+    "format-icons": [
+      "󰕿",
+      "󰖀",
+      "󰕾"
+    ],
+    "node-type": "Audio/Sink"
+  },
+  "wireplumber#input": {
+    "format": "󰍬 {volume}%",
+    "format-muted": "󰍭",
+    "node-type": "Audio/Source"
+  },
+  "backlight": {
+    "format": "{icon}",
+    "format-alt": "{icon} {percent}%",
+    "format-icons": [
+      "",
+      "",
+      "",
+      "",
+      "",
+      "",
+      "",
+      "",
+      ""
+    ],
+    "tooltip": false
+  },
+  "custom/knobs-decorator": {
+    "format": "",
+    "tooltip": false
+  }
+}

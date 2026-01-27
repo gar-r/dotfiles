@@ -1,0 +1,17 @@
+{
+  "niri/workspaces": {
+    "format": "{icon}",
+    "format-icons": {
+      "active": "",
+      "default": ""
+    }
+  },
+  "custom/workspaces-decorator-left": {
+    "format": "",
+    "tooltip": false
+  },
+  "custom/workspaces-decorator-right": {
+    "format": "",
+    "tooltip": false
+  }
+}

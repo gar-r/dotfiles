@@ -1,0 +1,35 @@
+{
+  "network": {
+    "interval": 10,
+    "format": "󰤨",
+    "format-ethernet": "󰈀",
+    "format-wifi": "{icon}",
+    "format-disconnected": "󰤯",
+    "format-disabled": "󰤮",
+    "format-icons": [
+      "󰤟",
+      "󰤢",
+      "󰤥",
+      "󰤨"
+    ],
+    "tooltip-format": "{gwaddr}",
+    "tooltip-format-ethernet": "{ifname}",
+    "tooltip-format-wifi": "{essid} ({signalStrength}%)"
+  },
+  "bluetooth": {
+    "format": "󰂯",
+    "format-disabled": "󰂲",
+    "format-off": "󰂲",
+    "format-on": "󰂰",
+    "format-connected": "󰂱",
+    "tooltip-format": "{device_address}",
+    "tooltip-format-connected": "{device_alias}",
+    "tooltip-format-enumerate-connected": "{device_alias}",
+    "tooltip-format-connected-battery": "{device_alias} ({device_battery_percentage}%)",
+    "tooltip-format-enumerate-connected-battery": "{device_alias} ({device_battery_percentage}%)"
+  },
+  "custom/network-decorator": {
+    "format": "",
+    "tooltip": false
+  }
+}

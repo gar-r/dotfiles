@@ -1,0 +1,20 @@
+#custom-updates {
+  padding: 0px 5px;
+  color: @highlight;
+  font-size: 16px;
+}
+
+#custom-updates.warning {
+  color: @warning;
+}
+
+#custom-updates.critical {
+  color: @urgent;
+}
+
+#custom-shutdown {
+  padding: 0px 10px;
+  padding-right: 20px;
+  color: @highlight;
+  font-size: 18px;
+}

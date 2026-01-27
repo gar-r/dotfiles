@@ -1,0 +1,23 @@
+#memory {
+  background-color: @mantle;
+  font-weight: bold;
+  padding: 0px 10px;
+}
+
+#cpu {
+  background-color: @mantle;
+  font-weight: bold;
+  padding: 0px 10px;
+}
+
+#temperature.warning,
+#cpu.warning,
+#memory.warning {
+  color: @warning;
+}
+
+#temperature.critical,
+#cpu.critical,
+#memory.critical {
+  color: @urgent;
+}
