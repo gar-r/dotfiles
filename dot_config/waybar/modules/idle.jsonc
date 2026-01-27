@@ -3,11 +3,11 @@
     "format": "{icon}",
     "format-icons": {
       "activated": "",
-      "deactivated": "󰣇"
+      "deactivated": "󰣇",
     },
     "min-length": 2,
     "max-length": 2,
     "start-activated": false,
-    "tooltip": false
-  }
+    "tooltip": false,
+  },
 }

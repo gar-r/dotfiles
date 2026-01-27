@@ -1,5 +1,5 @@
 {
-    "niri/window": {
-        "swap-icon-label": false
-    }
+  "niri/window": {
+    "swap-icon-label": false,
+  },
 }

@@ -6,7 +6,7 @@
     "custom/workspaces-decorator-left",
     "niri/workspaces",
     "custom/workspaces-decorator-right",
-    "niri/window"
+    "niri/window",
   ],
   "modules-center": [],
   "modules-right": [
@@ -22,7 +22,7 @@
     "custom/battery-decorator",
     "clock",
     "custom/updates",
-    "custom/shutdown"
+    "custom/shutdown",
   ],
   "include": [
     "~/.config/waybar/modules/idle.jsonc",
@@ -33,6 +33,6 @@
     "~/.config/waybar/modules/sysinfo.jsonc",
     "~/.config/waybar/modules/battery.jsonc",
     "~/.config/waybar/modules/clock.jsonc",
-    "~/.config/waybar/modules/sysmenu.jsonc"
-  ]
+    "~/.config/waybar/modules/sysmenu.jsonc",
+  ],
 }

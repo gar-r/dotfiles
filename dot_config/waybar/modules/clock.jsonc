@@ -5,8 +5,8 @@
     "tooltip-format": "<tt><small>{calendar}</small></tt>",
     "calendar": {
       "format": {
-        "today": "<span color='#e64553'><b>{}</b></span>"
-      }
-    }
-  }
+        "today": "<span color='#e64553'><b>{}</b></span>",
+      },
+    },
+  },
 }

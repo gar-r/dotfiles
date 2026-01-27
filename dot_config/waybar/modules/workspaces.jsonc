@@ -3,15 +3,15 @@
     "format": "{icon}",
     "format-icons": {
       "active": "",
-      "default": ""
-    }
+      "default": "",
+    },
   },
   "custom/workspaces-decorator-left": {
     "format": "",
-    "tooltip": false
+    "tooltip": false,
   },
   "custom/workspaces-decorator-right": {
     "format": "",
-    "tooltip": false
-  }
+    "tooltip": false,
+  },
 }

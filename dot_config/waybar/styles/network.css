@@ -1,16 +1,16 @@
 #network {
-  font-weight: bold;
-  padding: 0px 10px;
-  padding-right: 20px;
+    font-weight: bold;
+    padding: 0px 10px;
+    padding-right: 20px;
 }
 
 #bluetooth {
-  font-weight: bold;
-  padding: 0px 5px;
+    font-weight: bold;
+    padding: 0px 5px;
 }
 
 #custom-network-decorator {
-  color: @crust;
-  background-color: @base;
-  font-size: 23px;
+    color: @crust;
+    background-color: @base;
+    font-size: 23px;
 }

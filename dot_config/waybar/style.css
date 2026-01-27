@@ -1,47 +1,47 @@
 @import "styles/colors.css";
 
 * {
-  all: initial;
-  font-family: "Commit Mono Nerd Font";
-  font-size: 13px;
+    all: initial;
+    font-family: "Commit Mono Nerd Font";
+    font-size: 13px;
 }
 
 window#waybar {
-  background: @crust;
-  color: @text;
-  border-bottom: 1px solid @surface0;
+    background: @crust;
+    color: @text;
+    border-bottom: 1px solid @surface0;
 }
 
 button {
-  border-radius: 16px;
-  min-width: 16px;
-  padding: 0 10px;
+    border-radius: 16px;
+    min-width: 16px;
+    padding: 0 10px;
 }
 
 button:hover {
-  background-color: @crust;
+    background-color: @crust;
 }
 
 tooltip {
-  border: 2px solid @crust;
-  background-color: @base;
+    border: 2px solid @crust;
+    background-color: @base;
 }
 
 menu {
-  border: 2px solid @crust;
-  background: @base;
-  color: @text;
-  padding: 4px 4px;
+    border: 2px solid @crust;
+    background: @base;
+    color: @text;
+    padding: 4px 4px;
 }
 
 menuitem {
-  padding: 4px 4px;
-  font-size: 18px;
-  font-weight: bold;
+    padding: 4px 4px;
+    font-size: 18px;
+    font-weight: bold;
 }
 
 menuitem:hover {
-  background-color: @highlight;
+    background-color: @highlight;
 }
 
 @import "styles/idle.css";
