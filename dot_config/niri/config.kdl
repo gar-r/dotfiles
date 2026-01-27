@@ -235,6 +235,11 @@ binds {
 
 }
 
+cursor {
+    xcursor-theme "catppuccin-mocha-lavender-cursors"
+    xcursor-size 24
+}
+
 environment {
     XDG_SESSION_TYPE "wayland"
     XDG_CURRENT_DESKTOP "niri"
