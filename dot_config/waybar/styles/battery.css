@@ -1,5 +1,5 @@
 #battery {
-    background-color: @base;
+    background-color: @mantle;
     font-weight: bold;
     padding: 0px 10px;
 }
@@ -13,6 +13,6 @@
 }
 
 #custom-battery-decorator {
-    color: @base;
+    color: @mantle;
     font-size: 23px;
 }
