@@ -91,8 +91,8 @@ binds {
     // application keybinds
     Mod+D hotkey-overlay-title="Application Launcher" { spawn "fuzzel"; }
     Mod+Return hotkey-overlay-title="Terminal" { spawn "kitty"; }
-    Mod+W hotkey-overlay-title="Browser" { spawn "zen-browser"; }
-    Mod+Shift+W hotkey-overlay-title="Browser (private)" { spawn "zen-browser" "-private-window"; }
+    Mod+W hotkey-overlay-title="Browser" { spawn "librewolf"; }
+    Mod+Shift+W hotkey-overlay-title="Browser (private)" { spawn "librewolf" "-private-window"; }
 
     // screenshot
     Print { screenshot; }
