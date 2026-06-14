@@ -1,18 +1,11 @@
-MiniDeps.now(function()
-
-  MiniDeps.add({
-    source = "catppuccin/nvim",
+vim.pack.add({{ 
     name = "catppuccin",
-  })
+    src = "https://github.com/catppuccin/nvim", 
+}})
 
-  require("catppuccin").setup({
-    dim_inactive = {
-      enaled = true,
-      percentage = 0.5,
-    },
+require("catppuccin").setup({
+    flavour = "mocha",
     no_italic = true,
-  })
+})
 
-  vim.cmd([[colorscheme catppuccin]])
-
-end)
+vim.cmd.colorscheme "catppuccin-nvim"
