@@ -77,6 +77,8 @@ local servers = {
 }
 
 for name, config in pairs(servers) do
-    vim.lsp.config(name, config)
-    vim.lsp.enable(name)
+    if vim.fn.executable(config.cmd[1]) == 1 then
+        vim.lsp.config(name, config)
+        vim.lsp.enable(name)
+    end
 end

@@ -1,1 +1,6 @@
+require("plugins.mason")
+require("plugins.lsp")
+require("plugins.cmp")
 require("plugins.catppuccin")
+require("plugins.neotree")
+require("plugins.telescope")
