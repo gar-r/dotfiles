@@ -13,9 +13,6 @@ function M.set(mode, lhs, rhs, opts)
     vim.keymap.set(mode, lhs, rhs, opts)
 end
 
--- move selected lines in visual mode
-M.set("v", "<C-S-Up>", ":m '<-2<CR>gv=gv", { desc = "move lines down" })
-M.set("v", "<C-S-Down>", ":m '>+1<CR>gv=gv", { desc = "move lines up" })
 
 -- indent while keeping visual selection
 M.set("v", "<", "<gv", { desc = "decrease indent" })
