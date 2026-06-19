@@ -11,6 +11,13 @@ vim.diagnostic.config({
     update_in_insert = false,
 })
 
+K.map("n", "]d", vim.diagnostic.goto_next, { desc = "next diagnostic" })
+K.map("n", "[d", vim.diagnostic.goto_prev, { desc = "prev diagnostic" })
+K.map("n", "<leader>td", function()
+    local vt = vim.diagnostic.config().virtual_text
+    vim.diagnostic.config({ virtual_text = not vt })
+end, { desc = "toggle diagnostic virtual text" })
+
 vim.api.nvim_create_autocmd("LspAttach", {
     callback = function(args)
         local buf = args.buf
@@ -73,6 +80,18 @@ local servers = {
         cmd = { "gopls" },
         filetypes = { "go", "gomod", "gowork", "gotmpl" },
         root_markers = { "go.work", "go.mod", ".git" },
+    },
+    yaml_ls = {
+        cmd = { "yaml-language-server", "--stdio" },
+        filetypes = { "yaml", "yaml.docker-compose" },
+        root_markers = { ".git" },
+        settings = {
+            yaml = {
+                schemas = {
+                    ["https://json.schemastore.org/github-workflow.json"] = ".github/workflows/*.{yml,yaml}",
+                },
+            },
+        },
     },
 }
 

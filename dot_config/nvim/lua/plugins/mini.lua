@@ -13,6 +13,11 @@ require('mini.animate').setup()
 require('mini.indentscope').setup({ symbol = '│' })
 require('mini.trailspace').setup()
 require('mini.tabline').setup()
+require('mini.sessions').setup({
+    autoread = true,
+    autowrite = true,
+    directory = vim.fn.stdpath('data') .. '/sessions',
+})
 
 require('mini.hipatterns').setup({
     highlighters = {

@@ -44,4 +44,8 @@ K.map("n", "<leader>bp", "<cmd>bprevious<CR>", { desc = "prev buffer" })
 K.map("n", "<leader>bl", "<cmd>ls<CR>", { desc = "list buffers" })
 K.map("n", "<leader>bx", "<cmd>bdelete<CR>", { desc = "close buffer" })
 
+K.map("n", "<leader>w", "<cmd>w<CR>", { desc = "save file" })
+K.map("n", "<C-p>", function() require("telescope.builtin").find_files() end, { desc = "find files" })
+K.map("n", "<leader>e", "<cmd>Neotree toggle<CR>", { desc = "toggle file explorer" })
+
 return K
