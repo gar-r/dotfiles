@@ -33,9 +33,15 @@ K.map("n", "<leader>se", "<C-w>=", { desc = "split equalize" })
 K.map("n", "<leader>sx", "<cmd>close<CR>", { desc = "split close" })
 
 -- tabs
-K.map("n", "<leader>to", "<cmd>tabnew<CR>", { desc = "open new tab" })
-K.map("n", "<leader>tx", "<cmd>tabclose<CR>", { desc = "close current tab" })
 K.map("n", "<leader>tn", "<cmd>tabn<CR>", { desc = "next tab" })
 K.map("n", "<leader>tp", "<cmd>tabp<CR>", { desc = "prev tab" })
+K.map("n", "<leader>to", "<cmd>tabnew<CR>", { desc = "open new tab" })
+K.map("n", "<leader>tx", "<cmd>tabclose<CR>", { desc = "close current tab" })
+
+-- buffers
+K.map("n", "<leader>bn", "<cmd>bnext<CR>", { desc = "next buffer" })
+K.map("n", "<leader>bp", "<cmd>bprevious<CR>", { desc = "prev buffer" })
+K.map("n", "<leader>bl", "<cmd>ls<CR>", { desc = "list buffers" })
+K.map("n", "<leader>bx", "<cmd>bdelete<CR>", { desc = "close buffer" })
 
 return K

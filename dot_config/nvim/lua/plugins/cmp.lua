@@ -10,6 +10,9 @@ require("blink.cmp").setup({
     keymap = {
         preset = "enter",
     },
+    snippets = {
+        preset = "luasnip",
+    },
     sources = {
         default = {
             "lsp",

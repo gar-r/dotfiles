@@ -22,6 +22,11 @@ vim.api.nvim_create_autocmd("LspAttach", {
         K.map("n", "<leader>bf", vim.lsp.buf.format, { buffer = buf, desc = "format buffer"})
         K.map("n", "<leader>rn", vim.lsp.buf.rename, { buffer = buf, desc = "rename symbol"})
         K.map({ "n", "v" }, "<leader>ca", vim.lsp.buf.code_action, { buffer = buf, desc = "code action"})
+        K.map("n", "<leader>ih", function()
+            vim.lsp.inlay_hint.enable(not vim.lsp.inlay_hint.is_enabled({ bufnr = buf }), { bufnr = buf })
+        end, { buffer = buf, desc = "toggle inlay hints" })
+
+        vim.lsp.inlay_hint.enable(true, { bufnr = buf })
     end,
 })
 
