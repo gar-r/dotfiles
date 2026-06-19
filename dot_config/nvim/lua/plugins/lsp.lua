@@ -1,4 +1,4 @@
-local M = require("core.keymaps")
+local K = require("core.keymaps")
 
 vim.diagnostic.config({
     virtual_text = true,
@@ -13,19 +13,15 @@ vim.diagnostic.config({
 
 vim.api.nvim_create_autocmd("LspAttach", {
     callback = function(args)
-        local function map(mode, lhs, rhs, desc)
-            M.set(mode, lhs, rhs, { buffer = args.buf, desc = desc })
-        end
-
-        map("n", "gd", vim.lsp.buf.definition, "go to definition")
-        map("n", "gD", vim.lsp.buf.declaration, "go to declaration")
-        map("n", "gi", vim.lsp.buf.implementation, "go to implementation")
-        map("n", "gr", vim.lsp.buf.references, "show references")
-        map("n", "K", vim.lsp.buf.hover, "hover documentation")
-        map("n", "<leader>bf", vim.lsp.buf.format, "format buffer")
-        map("n", "<leader>rn", vim.lsp.buf.rename, "rename symbol")
-        map({ "n", "v" }, "<leader>ca", vim.lsp.buf.code_action, "code action")
-
+        local buf = args.buf
+        K.map("n", "gd", vim.lsp.buf.definition, { buffer = buf, desc = "go to definition"})
+        K.map("n", "gD", vim.lsp.buf.declaration, { buffer = buf, desc = "go to declaration"})
+        K.map("n", "gi", vim.lsp.buf.implementation, { buffer = buf, desc = "go to implementation"})
+        K.map("n", "gr", vim.lsp.buf.references, { buffer = buf, desc = "show references"})
+        K.map("n", "K", vim.lsp.buf.hover, { buffer = buf, desc = "hover documentation"})
+        K.map("n", "<leader>bf", vim.lsp.buf.format, { buffer = buf, desc = "format buffer"})
+        K.map("n", "<leader>rn", vim.lsp.buf.rename, { buffer = buf, desc = "rename symbol"})
+        K.map({ "n", "v" }, "<leader>ca", vim.lsp.buf.code_action, { buffer = buf, desc = "code action"})
     end,
 })
 

@@ -7,6 +7,7 @@ require("toggleterm").setup({
     direction = "horizontal",
 })
 
-vim.keymap.set("n", "<leader>tt", "<cmd>ToggleTerm<CR>", { desc = "toggle terminal" })
-vim.keymap.set("t", "<leader>tt", "<cmd>ToggleTerm<CR>", { desc = "toggle terminal" })
-vim.keymap.set("t", "<Esc>", "<C-\\><C-n>", { desc = "exit terminal mode" })
+local K = require("core.keymaps")
+K.map("n", "<leader>tt", "<cmd>ToggleTerm<CR>", { desc = "toggle terminal" })
+K.map("t", "<leader>tt", "<cmd>ToggleTerm<CR>", { desc = "toggle terminal" })
+K.map("t", "<Esc>", "<C-\\><C-n>", { desc = "exit terminal mode" })

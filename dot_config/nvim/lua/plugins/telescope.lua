@@ -6,9 +6,9 @@ vim.pack.add({
 require("telescope").setup({})
 
 local B = require("telescope.builtin")
-local M = require("core.keymaps")
+local K = require("core.keymaps")
 
-M.set("n", "<leader>ff", B.find_files, { desc = "find files" })
-M.set("n", "<leader>fg", B.live_grep, { desc = "grep files" })
-M.set("n", "<leader>fb", B.buffers, { desc = "find buffers" })
-M.set("n", "<leader>fh", B.help_tags, { desc = "find help" })
+K.map("n", "<leader>ff", B.find_files, { desc = "find files" })
+K.map("n", "<leader>fg", B.live_grep, { desc = "grep files" })
+K.map("n", "<leader>fb", B.buffers, { desc = "find buffers" })
+K.map("n", "<leader>fh", B.help_tags, { desc = "find help" })

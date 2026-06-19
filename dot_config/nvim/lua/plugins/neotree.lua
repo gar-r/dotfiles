@@ -1,4 +1,4 @@
-local M = require("core.keymaps")
+local K = require("core.keymaps")
 
 vim.pack.add({
     -- neo-tree
@@ -10,7 +10,7 @@ vim.pack.add({
 })
 
 -- explorer
-M.set("n", "<leader>et", "<cmd>Neotree toggle<CR>", { desc = "toggle file explorer" })
-M.set("n", "<leader>er", "<cmd>Neotree reveal<CR>", { desc = "reveal in explorer" })
+K.map("n", "<leader>et", "<cmd>Neotree toggle<CR>", { desc = "toggle file explorer" })
+K.map("n", "<leader>er", "<cmd>Neotree reveal<CR>", { desc = "reveal in explorer" })
 
 require("neo-tree").setup({})
