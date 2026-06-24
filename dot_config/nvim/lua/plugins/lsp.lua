@@ -93,6 +93,11 @@ local servers = {
             },
         },
     },
+    odin_ls = {
+        cmd = { "ols" },
+        filetypes = { "odin" },
+        root_markers = { "ols.json", "odin.json", ".git" },
+    },
 }
 
 for name, config in pairs(servers) do

@@ -14,6 +14,7 @@ require("mason-lspconfig").setup({
         "rust_analyzer",
         "gopls",
         "yamlls",
+        "ols",
     },
     automatic_enable = false,
 })
