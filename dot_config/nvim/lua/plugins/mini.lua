@@ -12,6 +12,7 @@ require('mini.bracketed').setup()
 require('mini.animate').setup()
 require('mini.indentscope').setup({ symbol = '│' })
 require('mini.trailspace').setup()
+vim.keymap.set('n', '<leader>tw', MiniTrailspace.trim, { desc = 'trim trailing whitespace' })
 require('mini.tabline').setup()
 require('mini.sessions').setup({
     autoread = true,
