@@ -8,7 +8,6 @@ vim.diagnostic.config({
         source = true,
     },
     underline = true,
-    update_in_insert = false,
 })
 
 K.map("n", "]d", vim.diagnostic.goto_next, { desc = "next diagnostic" })
@@ -32,8 +31,21 @@ vim.api.nvim_create_autocmd("LspAttach", {
         K.map("n", "<leader>ih", function()
             vim.lsp.inlay_hint.enable(not vim.lsp.inlay_hint.is_enabled({ bufnr = buf }), { bufnr = buf })
         end, { buffer = buf, desc = "toggle inlay hints" })
+    end,
+})
 
-        vim.lsp.inlay_hint.enable(true, { bufnr = buf })
+vim.api.nvim_create_autocmd("BufWritePre", {
+    callback = function(args)
+        if vim.bo[args.buf].buftype ~= "" then
+            return
+        end
+        local clients = vim.lsp.get_clients({
+            bufnr = args.buf,
+            method = "textDocument/formatting",
+        })
+        if #clients > 0 then
+            vim.lsp.buf.format({ bufnr = args.buf, async = true })
+        end
     end,
 })
 
@@ -92,6 +104,26 @@ local servers = {
                 },
             },
         },
+    },
+    jsonls = {
+        cmd = { "vscode-json-language-server", "--stdio" },
+        filetypes = { "json", "jsonc" },
+        root_markers = { ".git", "package.json", ".vscode" },
+    },
+    html_lsp = {
+        cmd = { "vscode-html-language-server", "--stdio" },
+        filetypes = { "html" },
+        root_markers = { ".git", "package.json" },
+    },
+    cssls = {
+        cmd = { "vscode-css-language-server", "--stdio" },
+        filetypes = { "css", "scss", "less" },
+        root_markers = { ".git", "package.json" },
+    },
+    marksman = {
+        cmd = { "marksman" },
+        filetypes = { "markdown" },
+        root_markers = { ".git" },
     },
     odin_ls = {
         cmd = { "ols" },

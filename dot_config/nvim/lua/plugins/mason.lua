@@ -14,6 +14,10 @@ local ensure_installed = {
     "rust-analyzer",
     "gopls",
     "yaml-language-server",
+    "json-lsp",
+    "html-lsp",
+    "css-lsp",
+    "marksman",
     "ols",
 }
 

@@ -11,4 +11,10 @@ require("nvim-treesitter").install({
     "typescript",
     "rust",
     "go",
+    "html",
+    "css",
+    "json",
+    "yaml",
+    "markdown",
+    "odin",
 }, { summary = true })

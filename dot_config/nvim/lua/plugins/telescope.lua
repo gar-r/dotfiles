@@ -3,7 +3,18 @@ vim.pack.add({
     "https://github.com/nvim-lua/plenary.nvim",
 })
 
-require("telescope").setup({})
+require("telescope").setup({
+    defaults = {
+        file_ignore_patterns = {
+            "node_modules",
+            ".git",
+            "dist",
+            "build",
+            "target",
+            "vendor",
+        },
+    },
+})
 
 local B = require("telescope.builtin")
 local K = require("core.keymaps")
@@ -19,3 +30,4 @@ K.map("n", "<leader>fS", B.lsp_workspace_symbols, { desc = "workspace symbols" }
 K.map("n", "<leader>gc", B.git_commits, { desc = "git commits" })
 K.map("n", "<leader>gs", B.git_status, { desc = "git status" })
 K.map("n", "<leader>gB", B.git_branches, { desc = "git branches" })
+K.map("n", "<leader>gf", B.git_files, { desc = "git tracked files" })

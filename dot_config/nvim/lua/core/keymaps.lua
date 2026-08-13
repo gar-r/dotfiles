@@ -18,11 +18,11 @@ K.map("v", "<", "<gv", { desc = "decrease indent" })
 K.map("v", ">", ">gv", { desc = "increase indent" })
 
 -- keep search result centered
-K.map("n", "n", "nzzzv")
-K.map("n", "N", "Nzzzv")
+K.map("n", "n", "nzzzv", { desc = "next search result" })
+K.map("n", "N", "Nzzzv", { desc = "prev search result" })
 
 -- delete char without copying to clipboard
-K.map("n", "x", '"_x')
+K.map("n", "x", '"_x', { desc = "delete char (no yank)" })
 
 K.map("n", "<C-c>", ":nohl<CR>", { desc = "clear search highlight" })
 
@@ -45,6 +45,8 @@ K.map("n", "<leader>bl", "<cmd>ls<CR>", { desc = "list buffers" })
 K.map("n", "<leader>bx", "<cmd>bdelete<CR>", { desc = "close buffer" })
 
 K.map("n", "<leader>w", "<cmd>w<CR>", { desc = "save file" })
+K.map("n", "<leader>q", "<cmd>q<CR>", { desc = "quit" })
+K.map("n", "<leader>Q", "<cmd>qa<CR>", { desc = "quit all" })
 K.map("n", "<C-p>", function() require("telescope.builtin").find_files() end, { desc = "find files" })
 
 return K

@@ -24,6 +24,13 @@ vim.opt.inccommand = "split"
 vim.opt.ignorecase = true
 vim.opt.smartcase = true
 
+vim.opt.timeoutlen = 300
+
+vim.opt.cursorline = true
+vim.opt.scrolloff = 8
+
+vim.opt.showmode = false
+
 vim.opt.termguicolors = true
 vim.opt.background = "dark"
 vim.opt.signcolumn = "yes"
