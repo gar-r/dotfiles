@@ -14,11 +14,6 @@ require('mini.indentscope').setup({ symbol = '│' })
 require('mini.trailspace').setup()
 vim.keymap.set('n', '<leader>tw', MiniTrailspace.trim, { desc = 'trim trailing whitespace' })
 require('mini.tabline').setup()
-require('mini.sessions').setup({
-    autoread = true,
-    autowrite = true,
-    directory = vim.fn.stdpath('data') .. '/sessions',
-})
 
 require('mini.hipatterns').setup({
     highlighters = {

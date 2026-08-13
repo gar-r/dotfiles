@@ -45,7 +45,7 @@ local servers = {
         settings = {
             Lua = {
                 diagnostics = {
-                    globals = { "vim" },
+                    globals = { "vim", "MiniTrailspace" },
                 },
                 runtime = {
                     version = "LuaJIT",

@@ -1,20 +1,32 @@
 vim.pack.add({
     "https://github.com/mason-org/mason.nvim",
-    "https://github.com/mason-org/mason-lspconfig.nvim",
 })
 
 require("mason").setup({})
 
-require("mason-lspconfig").setup({
-    ensure_installed = {
-        "lua_ls",
-        "clangd",
-        "pyright",
-        "ts_ls",
-        "rust_analyzer",
-        "gopls",
-        "yamlls",
-        "ols",
-    },
-    automatic_enable = false,
-})
+local registry = require("mason-registry")
+
+local ensure_installed = {
+    "lua-language-server",
+    "clangd",
+    "pyright",
+    "typescript-language-server",
+    "rust-analyzer",
+    "gopls",
+    "yaml-language-server",
+    "ols",
+}
+
+registry.refresh(vim.schedule_wrap(function(success)
+    if not success then
+        return
+    end
+    for _, pkg_name in ipairs(ensure_installed) do
+        if registry.has_package(pkg_name) then
+            local pkg = registry.get_package(pkg_name)
+            if not pkg:is_installed() and not pkg:is_installing() then
+                pkg:install()
+            end
+        end
+    end
+end))
