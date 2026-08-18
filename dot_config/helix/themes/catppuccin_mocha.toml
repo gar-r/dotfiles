@@ -1,0 +1,7 @@
+inherits = "catppuccin_mocha"
+
+"comment" = { fg = "overlay2" }
+"variable.parameter" = { fg = "maroon" }
+"keyword.control.conditional" = { fg = "mauve" }
+"namespace" = { fg = "yellow" }
+"markup.link.url" = { fg = "blue", modifiers = ["underlined"] }
