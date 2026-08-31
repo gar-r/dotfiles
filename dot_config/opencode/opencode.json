@@ -3,6 +3,11 @@
   "skills": {
     "paths": ["~/projects/skills"]
   },
+  "agent": {
+    "conductor": {
+      "model": "google/gemini-3-flash"
+    }
+  },
   "plugin": [
     "opencode-conductor-plugin"
   ]
