@@ -9,6 +9,7 @@
     }
   },
   "plugin": [
-    "opencode-conductor-plugin"
+    "opencode-conductor-plugin",
+    "@tarquinen/opencode-dcp@latest"
   ]
 }
