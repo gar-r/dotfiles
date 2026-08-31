@@ -1,0 +1,29 @@
+window-rule {
+    match app-id=r#"Pinentry.*"#
+    open-floating true
+}
+
+window-rule {
+    match app-id=r#"firefox$"# title="^Picture-in-Picture$"
+    open-floating true
+    default-column-width { fixed 480; }
+    default-window-height { fixed 270; }
+}
+
+window-rule {
+    match app-id="^gimp"
+    default-column-width { fixed 1200; }
+}
+
+window-rule {
+    match app-id=r#"steam"# title=r#".*(Friends|Settings|Properties).*"#
+    open-floating true
+}
+
+window-rule {
+    match is-window-cast-target=true
+    focus-ring {
+        active-color "#f38ba8"
+        inactive-color "#7d0d2d"
+    }
+}

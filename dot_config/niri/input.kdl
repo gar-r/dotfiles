@@ -1,0 +1,15 @@
+input {
+    keyboard {
+        xkb {
+            layout "us,hu"
+            options "grp:rctrl_rshift_toggle,compose:ralt,ctrl:nocaps"
+        }
+        track-layout "global"
+        numlock
+    }
+    touchpad {
+        tap
+        dwt
+        scroll-method "two-finger"
+    }
+}

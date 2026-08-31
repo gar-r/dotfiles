@@ -1,0 +1,7 @@
+hotkey-overlay {
+    skip-at-startup
+}
+
+prefer-no-csd
+
+screenshot-path "~/Pictures/Screenshots/niri-%Y-%m-%d_%H-%M-%S.png"
