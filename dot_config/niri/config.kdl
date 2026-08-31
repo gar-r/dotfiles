@@ -34,12 +34,12 @@ layout {
         proportion 0.5
     }
     focus-ring {
-        active-color "#7fc8ff"
-        inactive-color "#505050"
+        active-color "#7287fd"
+        inactive-color "#45475a"
     }
     border {
         off
-        urgent-color "#9b0000"
+        urgent-color "#f38ba8"
     }
 }
 
