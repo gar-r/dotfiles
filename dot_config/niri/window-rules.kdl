@@ -11,6 +11,11 @@ window-rule {
 }
 
 window-rule {
+  match app-id=r#"zen"#
+  open-maximized true
+}
+
+window-rule {
   match app-id="^gimp"
   default-column-width { fixed 1200; }
 }
