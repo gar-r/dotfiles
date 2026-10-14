@@ -13,3 +13,10 @@ input {
     scroll-method "two-finger"
   }
 }
+
+// disable the hot corner (mouse in top-left corner toggles overview)
+gestures {
+  hot-corners {
+    off
+  }
+}

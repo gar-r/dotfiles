@@ -37,3 +37,17 @@ window-rule {
     inactive-color "#7d0d2d"
   }
 }
+
+// MO2 rules
+window-rule {
+  match app-id=r#"^steam_app_489830$"#
+  exclude title=r#"Mod Organizer"#
+  exclude title=r#"^Skyrim( Special Edition)?$"#
+  open-floating true
+}
+
+// MO2 fallback rules
+window-rule {
+  match app-id=r#"(?i)^(xEdit|SSEEdit|TES[45]Edit|FO[47][66]?Edit|EnderalEdit|BodySlide|Outfit ?Studio|Pandora|PGPatcher|LOOT|DynDOLOD|TexGen|Nemesis|Wrye ?Bash|BethINI)"#
+  open-floating true
+}
